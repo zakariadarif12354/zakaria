@@ -229,9 +229,10 @@ document.getElementById("ctaForm").addEventListener("submit", function (e) {
     this.innerHTML = `
       <div style="text-align:center; padding: 10px 0;">
         <i class="fas fa-check-circle" style="font-size: 2rem; margin-bottom: 8px;"></i>
-        <p style="font-size: 1.1rem; font-weight: 600;">Thanks! We'll send travel picks to ${email}</p>
+        <p style="font-size: 1.1rem; font-weight: 600;">Thanks! We'll send travel picks to <span id="confirmedEmail"></span></p>
       </div>
     `;
+    document.getElementById("confirmedEmail").textContent = email;
   }
 });
 
